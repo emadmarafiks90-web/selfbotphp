@@ -32,14 +32,67 @@ Current prototype includes:
 - Internet connection
 - A Bale account you own or are authorized to use
 
-### Install (Debian / Linux Mint)
+### Installation
+
+#### Ubuntu
+
 ```bash
 sudo apt update
-sudo apt install php-cli php-curl
+sudo apt install php-cli php-curl git
+php -v
+php -m | grep -i curl
 git clone https://github.com/emadmarafiks90-web/selfbotphp.git
 cd selfbotphp
 php bale.php
 ```
+
+#### Debian
+
+```bash
+sudo apt update
+sudo apt install php-cli php-curl git
+php -v
+php -m | grep -i curl
+git clone https://github.com/emadmarafiks90-web/selfbotphp.git
+cd selfbotphp
+php bale.php
+```
+
+Make sure the installed PHP version is 8.1 or newer and that cURL appears in the PHP modules list.
+
+#### Windows
+
+1. Install PHP 8.1 or newer for Windows and Git for Windows.
+2. During PHP setup, create `php.ini` from `php.ini-development`.
+3. Open `php.ini` and enable the cURL extension by making sure this line is active (remove the leading semicolon if present):
+
+```ini
+extension=curl
+```
+
+4. Add the directory containing `php.exe` to your Windows `PATH`, then open a new PowerShell window.
+5. Check PHP and cURL:
+
+```powershell
+php -v
+php -m | findstr /I curl
+```
+
+6. Download and run the project:
+
+```powershell
+git clone https://github.com/emadmarafiks90-web/selfbotphp.git
+cd selfbotphp
+php bale.php
+```
+
+If you use XAMPP instead of a standalone PHP installation, enable cURL in XAMPP's `php.ini` and run the script with the PHP executable from the XAMPP installation, for example:
+
+```powershell
+C:\xampp\php\php.exe bale.php
+```
+
+If you do not have Git, download the repository ZIP from GitHub, extract it, open PowerShell in the extracted folder, and run `php bale.php`.
 
 Enter your phone number with country code 98, then follow the verification prompts. All CLI prompts are in English.
 
@@ -88,14 +141,67 @@ EM.ir Bale PHP Self-Bot یک پروژه آزمایشی با زبان PHP است 
 - اتصال اینترنت
 - حساب بله‌ای که مالک آن هستید یا اجازه استفاده از آن را دارید
 
-### نصب و اجرا در لینوکس مینت
+### نصب و اجرا
+
+#### اوبونتو (Ubuntu)
+
 ```bash
 sudo apt update
-sudo apt install php-cli php-curl
+sudo apt install php-cli php-curl git
+php -v
+php -m | grep -i curl
 git clone https://github.com/emadmarafiks90-web/selfbotphp.git
 cd selfbotphp
 php bale.php
 ```
+
+#### دبیان (Debian)
+
+```bash
+sudo apt update
+sudo apt install php-cli php-curl git
+php -v
+php -m | grep -i curl
+git clone https://github.com/emadmarafiks90-web/selfbotphp.git
+cd selfbotphp
+php bale.php
+```
+
+مطمئن شوید نسخه PHP حداقل 8.1 باشد و افزونه cURL در فهرست ماژول‌ها نمایش داده شود.
+
+#### ویندوز (Windows)
+
+1. PHP نسخه 8.1 یا بالاتر مخصوص ویندوز و Git for Windows را نصب کنید.
+2. در پوشه PHP، از فایل `php.ini-development` یک کپی با نام `php.ini` بسازید.
+3. فایل `php.ini` را باز کنید و افزونه cURL را فعال کنید؛ اگر ابتدای خط زیر نقطه‌ویرگول وجود دارد، آن را بردارید:
+
+```ini
+extension=curl
+```
+
+4. مسیر پوشه‌ای که فایل `php.exe` در آن قرار دارد به متغیر محیطی `PATH` ویندوز اضافه کنید و یک پنجره جدید PowerShell باز کنید.
+5. نصب PHP و cURL را بررسی کنید:
+
+```powershell
+php -v
+php -m | findstr /I curl
+```
+
+6. پروژه را دریافت و اجرا کنید:
+
+```powershell
+git clone https://github.com/emadmarafiks90-web/selfbotphp.git
+cd selfbotphp
+php bale.php
+```
+
+اگر از XAMPP استفاده می‌کنید، افزونه cURL را در فایل `php.ini` مربوط به XAMPP فعال کنید و برنامه را با PHP داخل پوشه XAMPP اجرا کنید. برای نمونه:
+
+```powershell
+C:\xampp\php\php.exe bale.php
+```
+
+اگر Git نصب ندارید، فایل ZIP مخزن را از GitHub دانلود و استخراج کنید؛ سپس PowerShell را در پوشه پروژه باز کرده و دستور `php bale.php` را اجرا کنید.
 
 شماره تلفن را با کد کشور 98 وارد کنید و مراحل تأیید را ادامه دهید. تمام پیام‌های ورودی ترمینال به زبان انگلیسی هستند.
 

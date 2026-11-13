@@ -1,0 +1,7 @@
+/vendor/
+/.env
+/bale.session
+/bale.device
+/bale.appkey
+*.log
+*.tmp

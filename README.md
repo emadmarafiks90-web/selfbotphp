@@ -96,14 +96,9 @@ If you do not have Git, download the repository ZIP from GitHub, extract it, ope
 
 Enter your phone number with country code 98, then follow the verification prompts. All CLI prompts are in English.
 
-### Local files
-| File | Purpose |
-|---|---|
-| `bale.device` | Persistent local device identifier |
-| `bale.appkey` | Cached web-client configuration |
-| `bale.session` | Authentication response |
+### Session security
 
-These files are ignored by Git. Treat `bale.session` as a credential. Never publish or share it. You may set `BALE_APP_KEY` in the environment to provide the web-client configuration value manually.
+The authentication response is stored locally in `bale.session`. This file is ignored by Git. Treat it as a credential and never publish, upload, or share it.
 
 ### Roadmap
 - Improved protocol response decoding
@@ -205,14 +200,9 @@ C:\xampp\php\php.exe bale.php
 
 شماره تلفن را با کد کشور 98 وارد کنید و مراحل تأیید را ادامه دهید. تمام پیام‌های ورودی ترمینال به زبان انگلیسی هستند.
 
-### فایل‌های محلی
-| نام فایل | کاربرد |
-|---|---|
-| `bale.device` | شناسه محلی دستگاه |
-| `bale.appkey` | پیکربندی ذخیره‌شده وب‌کلاینت |
-| `bale.session` | پاسخ احراز هویت |
+### امنیت نشست
 
-این فایل‌ها توسط Git نادیده گرفته می‌شوند. فایل `bale.session` را مانند رمز عبور محرمانه نگه دارید و آن را منتشر یا برای دیگران ارسال نکنید. برای تعیین دستی مقدار پیکربندی وب‌کلاینت می‌توانید متغیر محیطی `BALE_APP_KEY` را تنظیم کنید.
+پاسخ احراز هویت به‌صورت محلی در فایل `bale.session` ذخیره می‌شود. این فایل توسط Git نادیده گرفته می‌شود. آن را مانند یک اطلاعات محرمانه نگه دارید و منتشر یا برای دیگران ارسال نکنید.
 
 ### برنامه توسعه
 - بهبود تجزیه پاسخ‌های پروتکل
